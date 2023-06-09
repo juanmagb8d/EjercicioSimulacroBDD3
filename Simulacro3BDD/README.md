@@ -102,3 +102,6 @@ ORDER BY piezas.peso DESC
 LIMIT 1;
 
 ![Query 10](QUERY10.png)
+
+(Más tarde subo las 2 queries que faltan)
+
