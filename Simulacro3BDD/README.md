@@ -87,6 +87,7 @@ SELECT nombre_proveedor
 FROM (proveedores
 INNER JOIN piezas on proveedores.id_proveedor=piezas.id_proveedor)
 WHERE piezas.color="verde"
+GROUP BY proveedores.id_proveedor
 ORDER BY count(id_pieza) DESC
 LIMIT 1;
 
@@ -95,7 +96,7 @@ LIMIT 1;
 _Query 10:_
 
 SELECT nombre_pieza
-FROM piezas
+FROM (piezas
 INNER JOIN proveedores on piezas.id_proveedor=proveedores.id_proveedor)
 WHERE proveedores.ciudad_proveedor="Valencia"
 ORDER BY piezas.peso DESC
